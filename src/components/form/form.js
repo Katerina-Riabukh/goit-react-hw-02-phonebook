@@ -1,7 +1,7 @@
 import { nanoid } from "nanoid";
 import React, { Component } from "react";
 import { BUTTON, FORM, Input, LABEL } from "./form.styled";
-import PropTypes from 'prop-types';
+
 
 
 
@@ -68,15 +68,6 @@ export class Form extends Component {
  
 };
 
-
-FORM.prototype = {
-
-  handleSubmitForm: PropTypes.func.isRequired,
-  name: PropTypes.string.isRequired,
-  handleInputChange: PropTypes.func.isRequired,
-  number: PropTypes.string.isRequired,
-
-}
 
 
 

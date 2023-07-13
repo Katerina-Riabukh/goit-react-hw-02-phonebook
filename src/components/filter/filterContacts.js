@@ -17,7 +17,7 @@ export const FilterContacts = ({filterContactsByName})=>{
   
 };
 
-FilterContacts.prototype = {
+FilterContacts.propTypes = {
     filterContactsByName: PropTypes.func.isRequired,
 }
 

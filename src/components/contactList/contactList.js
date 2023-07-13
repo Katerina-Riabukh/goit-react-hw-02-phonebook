@@ -16,7 +16,7 @@ export const ContactList = ({ data, delateContact }) => {
   
 }
 
-ContactList.prototype = {
+ContactList.propTypes = {
     data: PropTypes.arrayOf(PropTypes.object.isRequired),
     delateContact: PropTypes.func.isRequired,
 };

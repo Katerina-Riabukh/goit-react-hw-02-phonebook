@@ -15,7 +15,7 @@ export const ContactItem = ({ item, delateContact }) => {
         </LI>
 };
 
-ContactItem.prototype = {
+ContactItem.propTypes = {
         item: PropTypes.objectOf(PropTypes.string),
         delateContact: PropTypes.func.isRequired,
 }
