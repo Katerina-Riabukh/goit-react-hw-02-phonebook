@@ -1,36 +1,24 @@
-import React, { Component } from "react";
+import React from "react";
 import { Filter, FilterContact } from "./filterContacts.styled";
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 
 
-export class FilterContacts extends Component{
+export const FilterContacts = ({filterContactsByName})=>{
 
-    state = {
-        value: '',
-    }
 
-    onChangeFilter = (event) => {
-        this.props.filterContactsByName(event.currentTarget.value)
-    }
-
-    render() {
-       
-        return (  <FilterContact> Find contact by name
-            <Filter type="text"
-                value={this.props.value}
-            onChange={this.onChangeFilter}></Filter>
-        </FilterContact>
-    )
-    }
+    return (<FilterContact> Find contact by name
+        <Filter type="text"
+            onChange={(event) => filterContactsByName(event.currentTarget.value)}></Filter>
+    </FilterContact>
+    );
+    
 
   
 };
 
-// FilterContacts.prototype = {
-
-//     value: PropTypes.string,
-//     onChangeFilter: PropTypes.func,
-// }
+FilterContacts.prototype = {
+    filterContactsByName: PropTypes.func.isRequired,
+}
 
   
