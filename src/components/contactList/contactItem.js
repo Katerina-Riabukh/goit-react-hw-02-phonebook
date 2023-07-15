@@ -9,7 +9,7 @@ export const ContactItem = ({ item, delateContact }) => {
         const { name, number, id } = item
 
         return <LI >
-                <Name>{ name}</Name>
+                <Name>{name}</Name>
                 <span>{number}</span>
                 <Button onClick={() => delateContact(id)}>Delate contact</Button>
         </LI>
